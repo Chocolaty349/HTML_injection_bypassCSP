@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% autoescape false %}
+<html>
+    <head>
+        <title>
+            Bypass CSP with angular
+        </title> 
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+    <div class="container">
+        <h1>Reflect User Input</h1>
+        <form method="GET" action="/">
+            <input type="text" name="input" placeholder="Enter something" value="{{ input }}">
+            <input type="submit" value="Submit">
+        </form>
+        <p>You entered: {{ input }}</p>
+        <p ng-app="">{{1+1}}</p>
+    </div>
+    </body>
+</html>
+{% endautoescape %}
